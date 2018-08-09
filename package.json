@@ -1,0 +1,18 @@
+{
+  "name": "oraquick",
+  "version": "1.0.0",
+  "description": "Server to tie tablet and operator together",
+  "repository": "electron/simple-samples",
+  "main": "app.js",
+  "dependencies": {
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "electron": "^1.4.12"
+  },
+  "scripts": {
+    "start": "electron app.js"
+  },
+  "author": "Steven Gray",
+  "license": "MIT"
+}

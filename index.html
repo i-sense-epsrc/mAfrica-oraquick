@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mAfrica OraQuick Control Interface</title>
+	<meta name="author" content="Steven James Gray">
+	<meta name="description" content="Contact: steven.gray@ucl.ac.uk">
+	
+	<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/fa_all.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="./assets/img/fav.ico" />
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="circle"></div>
+
+		<div class="row">
+		    <div class="col">
+		      	<span class="pos icon" style="font-size: 13em; color: grey; margin: 0 auto;">
+  					<i class="fas fa-plus-circle"></i>
+				</span>
+  				<br/>
+				<!-- Positive -->
+				<span class="textDesc">Positive</span>
+		    </div>
+		    <div class="col">
+			    <span class="neg icon" style="font-size: 13em; color: grey;">
+	  				<i class="fas fa-minus-circle"></i>
+				</span>
+				<br/>
+				<!-- Negative -->
+				<span class="textDesc">Negative</span>
+		    </div>
+		    <div class="col">
+			    <span class="invalid icon" style="font-size: 13em; color: grey;">
+	  				<i class="fas fa-question-circle"></i>
+				</span>
+				<br/>
+	  			<!-- Invalid -->
+	  			<span class="textDesc">Invalid</span>
+		    </div>
+		    <div class="col">
+			    <span class="retake icon" style="font-size: 13em; color: grey;">
+	  				<i class="fas fa-camera"></i>
+				</span>
+				<br/>
+	  			<!-- Retake -->
+	  			<span class="textDesc">Retake Photo</span>
+		    </div>
+		</div>
+
+		<div class="row infoBar">
+			<span class="col info">Application Started</span>
+			<span class="col server-info"></span>
+		</div>
+
+	</div>
+
+	<!-- Local Scripts -->
+	<script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/bootstrap.js"></script> 
+	<script src="./assets/socket.io/socket.io.js"></script> 
+	<script src="./assets/js/oraquick.js"></script> 
+
+</body>
+</html>

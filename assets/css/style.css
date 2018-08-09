@@ -1,0 +1,46 @@
+body{
+	background-color: #fff;
+}
+
+.circle {
+	height:10px;
+	width:10px;
+	background-color: #c00;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 0px;
+	border-radius: 10px;
+	margin-top: 20px;
+	float: right;
+}
+
+.connected{
+	background-color: #5c8a00;
+}
+
+.col{
+	text-align: center;
+}
+
+.textDesc {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.row{
+	margin-bottom: 40px; 
+}
+
+.server-info{
+	text-align: right; 
+}
+
+.info{
+	text-align: left;
+}
+
+.fas:active { 
+	color: blue;
+}
