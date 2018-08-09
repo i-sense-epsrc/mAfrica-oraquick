@@ -2,7 +2,7 @@
 //  Author: Steven Gray
 //  Email:  steven.gray@ucl.ac.uk
 //  Date:  08/08/18
-//  Version: 1.0.1
+//  Version: 1.0.2
 
 var serverPort = 8888;
 
