@@ -1,5 +1,5 @@
-# mAfrica-oraquick
-A control interface for the mAfrica OraQuick Android App.  This Electron app allows the user to control the Android Application remotly prompting users to carry out specific tasks.
+# mAfrica OraQuick Application
+A control interface for the mAfrica OraQuick Android App.  This Electron app allows the user to control the Android Application remotely prompting users to carry out specific tasks.
 
 ## Application Screenshot
 
