@@ -11,7 +11,10 @@
     "electron": "^1.4.12"
   },
   "scripts": {
-    "start": "electron app.js"
+    "start": "electron app.js",
+    "pack-osx": "electron-packager . 'OraQuick' --platform=darwin --arch=x64 --app-bundle-id='com.stevenjamesgray.oraquick' --app-version='1.0.2' --build-version='1.0.2' icon=./assets/img/icon.icns --out=dist-binaries/mac/.  --overwrite --ignore=dist-binaries",
+    "pack-win": "electron-packager . --platform=win32 --arch=x64 --version=1.0.2 app-version=1.0 --version-string.CompanyName=SJG --version-string.FileDescription=SJG --version-string.ProductName=\"OraQuick\" --out=dist-binaries/win/.  --overwrite --ignore=dist-binaries",
+    "pack-linux": "electron-packager . --out=dist-binaries/linux/.  --overwrite --ignore=dist-binaries"
   },
   "author": "Steven Gray",
   "license": "MIT"

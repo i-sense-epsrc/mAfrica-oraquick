@@ -6,7 +6,6 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -43,7 +42,7 @@ pids
 lib-cov
 
 # Directory of Distribution Files
-dist
+dist-binaries
 
 # Coverage directory used by tools like istanbul
 coverage
