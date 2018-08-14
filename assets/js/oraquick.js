@@ -62,7 +62,7 @@ $(document).ready(function() {
         var dimensions = getImageDimensions(data.image).then(function(result) {
             var border = 15;
             result.w = result.w + border;
-            result.h = result.h + border + 25;
+            result.h = result.h + border;
             
             var win = window.open("", "Tablet Image", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width="+result.w+",height="+result.h+",top="+(screen.height-400)+",left="+(screen.width-840));
             win.document.body.innerHTML = imgTag;            
