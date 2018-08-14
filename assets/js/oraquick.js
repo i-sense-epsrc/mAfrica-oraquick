@@ -1,6 +1,9 @@
 var socket;
 
+window.__electron = require('electron');
+
 $(document).ready(function() {
+
 	socket = io.connect('http://localhost:8888');
 
 	socket.on('connect',function() {
@@ -49,6 +52,28 @@ $(document).ready(function() {
 		$(".server-info").html(data); 
 	});
 
+    socket.on('devicePhotoRecieved', function(data){
+        console.log("Image recieved from tablet");
+        $(".info").html("<b>" + formatDate(new Date(), "HH:mm:ss") + ": </b>Photo Recieved"); 
+        
+        var data = JSON.parse(data);
+        var imgTag = "<img src='"+data.image+"' alt='imageFromTablet'/>"
+
+        var dimensions = getImageDimensions(data.image).then(function(result) {
+            var border = 15;
+            result.w = result.w + border;
+            result.h = result.h + border + 25;
+            
+            var win = window.open("", "Tablet Image", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width="+result.w+",height="+result.h+",top="+(screen.height-400)+",left="+(screen.width-840));
+            win.document.body.innerHTML = imgTag;            
+
+        });
+
+        setTimeout( function(){
+            $(".info").html("<b>" + formatDate(new Date(), "HH:mm:ss") + ": </b>Ready for Nurse Input"); 
+        }, 3000)
+
+    });
 
 	$(".pos").click(function(event){
 		console.log("Pos Clicked");
@@ -158,3 +183,14 @@ function formatDate(date, format, utc) {
 
     return format;
 };
+
+function getImageDimensions(file) {
+  return new Promise (function (resolved, rejected) {
+    var i = new Image()
+    i.onload = function(){
+      resolved({w: i.width, h: i.height})
+    };
+    i.src = file
+  })
+}
+
