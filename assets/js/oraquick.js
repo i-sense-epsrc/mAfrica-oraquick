@@ -52,6 +52,10 @@ $(document).ready(function() {
 		$(".server-info").html(data); 
 	});
 
+    socket.on('tabletMsg', function(msg){
+        $(".info").html("<b>" + formatDate(new Date(), "HH:mm:ss") + ": </b>" + msg); 
+    });
+
     socket.on('devicePhotoRecieved', function(data){
         console.log("Image recieved from tablet");
         $(".info").html("<b>" + formatDate(new Date(), "HH:mm:ss") + ": </b>Photo Recieved"); 

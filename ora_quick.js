@@ -62,6 +62,10 @@ io.sockets.on('connection', function (socket) {
      io.sockets.emit('tabletIsReadyForProcessing', JSON.stringify({"status": "ready"}) );
   });
 
+  socket.on('tabletMessage', function(msg) {
+     io.sockets.emit('tabletMsg', msg);
+  });
+
   socket.on('tabletImage', function (data) {
     console.log("Photo Recieved");
     if(data == undefined || data == ""){
